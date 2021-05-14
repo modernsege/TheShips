@@ -11,4 +11,20 @@ create table Profiles (ID int auto_increment, Nickname char(50), Wins int, Defea
 create or replace view AbilitiesOfFractionsView as select aof.Fraction_Name, a.Ability_Name, a.Type, a.Description, a.Cooldown, aof.Fraction_ID, aof.Ability_ID from (select f.Fraction_Name, af.Fraction_ID, af.Ability_ID from Fractions f inner join AbilitiesOfFractions af on f.ID = af.Fraction_ID) aof inner join Abilities a on aof.Ability_ID = a.ID;
 create or replace view ItemsAndEffectsView as select eoi.Item_Name, e.Effect, eoi.Item_ID, eoi.Effect_ID, eoi.Arguments, e.Arguments_Format from (select i.Item_Name, ei.Item_ID, ei.Effect_ID, ei.Arguments from Items i inner join EffectsOfItems ei on i.ID = ei.Item_ID) eoi inner join Effects e on eoi.Effect_ID = e.ID;
 
+DELIMITER //
 
+create trigger delete_ability
+after delete on abilities
+for each row
+begin
+	delete from abilitiesoffractions where ability_ID = old.id;	
+end //
+
+create trigger delete_fractions
+after delete on fractions
+for each row
+begin
+	delete from abilitiesoffractions where fraction_ID = old.id;	
+end //
+
+DELIMITER ;
