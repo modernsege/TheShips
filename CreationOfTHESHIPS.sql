@@ -27,4 +27,8 @@ begin
 	delete from abilitiesoffractions where fraction_ID = old.id;	
 end //
 
+
+
 DELIMITER ;
+
+# blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
