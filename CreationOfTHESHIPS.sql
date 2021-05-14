@@ -28,6 +28,7 @@ begin
 end //
 
 # test
+# git test 2
 
 create trigger delete_effects
 after delete on effects
