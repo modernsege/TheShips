@@ -27,8 +27,21 @@ begin
 	delete from abilitiesoffractions where fraction_ID = old.id;	
 end //
 
+# test
 
+create trigger delete_effects
+after delete on effects
+for each row
+begin
+	delete from effectsofitems where Effect_ID = old.id;
+end//
+
+create trigger delete_item
+after delete on items
+for each row
+begin
+	delete from effectsofitems where Item_ID = old.id;	
+end //
 
 DELIMITER ;
 
-# blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
