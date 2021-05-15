@@ -27,6 +27,9 @@ begin
 	delete from abilitiesoffractions where fraction_ID = old.id;	
 end //
 
+# test
+# git test 2
+
 create trigger delete_effects
 after delete on effects
 for each row

@@ -10,9 +10,9 @@ conn = mysql.connector.connect(
     passwd="root",
     database="hr"
 )
-
 print('c=Create, r=Read, u=Update, d=Delete ')
 choice = input('Co chcesz zrobić? Wybierz opcje:  ')
+
 
 if choice == 'c':
     create1 = Create()
