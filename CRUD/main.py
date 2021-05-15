@@ -1,16 +1,32 @@
-# This is a sample Python script.
+import mysql.connector
+from create import Create
+from read import Read
+from update import Update
+from delete import Delete
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="root",
+    database="hr"
+)
 
+print('c=Create, r=Read, u=Update, d=Delete ')
+choice = input('Co chcesz zrobić? Wybierz opcje:  ')
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+if choice == 'c':
+    create1 = Create()
+    create1.create_data_in_jobs()
+elif choice == 'r':
+    read1 = Read()
+    read1.read_biggest_salaries_from_employees()
+elif choice == 'u':
+    pass
+    update1 = Update()
+    update1.func_UpdateData()
+elif choice == 'd':
+    delete1 = Delete()
+    delete1.func_DeleteData()
+else:
+    print('Wybrana operacja nie istnieje')
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
