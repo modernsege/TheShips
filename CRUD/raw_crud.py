@@ -3,7 +3,7 @@ import sys
 # ==============================================================FUNCTIONS!============================================================
 
 
-def connection_to_server(hostAddres='localhost', datab="world"):
+def connection_to_server(hostAddres='localhost', datab="TheShips"):
     username = input("Please log in to database, input your username: ")
     password = input("Input your password: ")
     #datab = input("Input database you want to use")
@@ -66,8 +66,6 @@ def display_sth(connection, table, columns="*", where_or_having="", group_by=Non
                     "Something went HORRIBLY wrong!(group by ... having). ", sys.exc_info()[0])
                 return None
         result = cursor.fetchall()
-
-        print(result)
         return result
 
     else:
@@ -103,4 +101,26 @@ def delete_sth(connection, table, where):
                 "Well, nope, sorry - sth wrong... Better luck next time. ", sys.exc_info()[0])
     else:
         print("Nice try")
+
+
+def display_columns(connection, table, database = 'TheShips'):
+    if no_easy_insertion(table) == False:
+        cursor = connection.cursor()
+        try:
+            cursor.execute(
+                f"select column_name from information_schema.columns where table_name = N'{table}' and table_schema = '{database}';")
+
+        except:
+            print("Something went HORRIBLY wrong!(where). ",
+                    sys.exc_info()[0])
+            return None
+
+        result = cursor.fetchall()
+
+        output = []
+        for i in range (len(result)):
+            output.append(result[i][0])
+        return output
+
+
 
