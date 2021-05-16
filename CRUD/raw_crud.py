@@ -104,7 +104,7 @@ def delete_sth(connection, table, where):
 
 
 def display_columns(connection, table, database = 'TheShips'):
-    if no_easy_insertion(table) == False:
+    if no_easy_insertion(table, database) == False:
         cursor = connection.cursor()
         try:
             cursor.execute(
@@ -140,6 +140,8 @@ def display_tables(connection, database = 'TheShips'):
         for i in range (len(result)):
             output.append(result[i][0])
         return output
+
+
 
 
 def if_string_to_SQL(name):
