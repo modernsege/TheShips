@@ -73,6 +73,8 @@ WHERE item_name = name_of_item;
 END $$
 DELIMITER ;
 
+
+
 DELIMITER $$
 CREATE PROCEDURE match_ended (IN winner integer, IN loser integer)
 BEGIN
@@ -87,7 +89,8 @@ commit;
 END $$
 DELIMITER ;
 
-
+set SQL_SAFE_UPDATES = 0;
+call match_ended (2,3);
 
 create or replace view NamesAndDescriptionsFractionAndAbilities as select fraction_name as name, description from fractions union select ability_name as name, description from abilities;
 create or replace view NamesAndDescriptionsItemsAndEffects as  select item_name as name, description from items union select effect as name, description from effects;
