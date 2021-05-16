@@ -1,7 +1,6 @@
-import mysql.connector
 from raw_crud import delete_sth
 from raw_crud import display_tables
-from raw_crud import if_string_to_SQL
+
 
 class Delete:
     def delete_rows(self, conn):

@@ -1,4 +1,3 @@
-import mysql.connector
 from raw_crud import update_sth
 from raw_crud import display_tables
 from raw_crud import display_columns

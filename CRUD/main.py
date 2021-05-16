@@ -1,4 +1,3 @@
-import mysql.connector
 from create import Create
 from read import Read
 from update import Update
