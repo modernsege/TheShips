@@ -1,6 +1,6 @@
 # TheShips
 ## TWÓRCY PROJKETU
-Szymon Cygan Informatyka Techniczna, gr. proj. 1 <\br>
+Szymon Cygan Informatyka Techniczna, gr. proj. 1 <br/>
 Maciej Leśniak Informatyka Techniczna, gr. proj. 2
 
 ### IDEA PROJEKTU
