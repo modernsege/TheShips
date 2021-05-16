@@ -21,8 +21,10 @@ class Read:
         
         all_tables = display_tables(conn)
         for i in range (len(all_tables)):
-            print(all_tables[i].upper(), end=" | ")
-        chosen_table = input("What table to display: ")
+            all_tables[i] = all_tables[i].upper()
+            print(all_tables[i], end=" | ")
+        chosen_table = input("What table to update: ")
+        chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
             all_columns=display_columns(conn, chosen_table, 'world')

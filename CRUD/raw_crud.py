@@ -143,3 +143,18 @@ def display_tables(connection, database = 'TheShips'):
 
 
 
+def if_string_to_SQL(name):
+    string_flag = 0
+    num_list = ['0','1','2','3','4','5','6','7','8','9']
+
+    for i in range (len(name)):
+        if name[i] in num_list:
+            pass
+        else:
+            string_flag=1
+    if string_flag == 1:
+        result = f"'{name}'"
+    else:
+        result = name
+
+    return result
