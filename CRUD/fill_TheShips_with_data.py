@@ -57,3 +57,9 @@ insert_record(conn, 'fractions', '1,"Merchant Federation", "Fraction focused on 
 insert_record(conn, 'fractions', '3,"Vikings", "They can throw their axes faster than sth very fast. U blink u miss it.", 100')
 insert_record(conn, 'fractions', '2,"Transport Guild", "Has the fastest ships all over the world. It is able to change their position even in the fires of battle.", 300')
 insert_record(conn, 'fractions', '4,"Pirates", "Their cannon shots are more paiful than stepping on the lego with your bare foot.", 200')
+
+#
+insert_record(conn, 'profiles', '1,"Admin", 99999, 0,"admin","jhk2e89sdn10sd5sudas89d82d988sd98sd98209","admino911@gmail.com"')
+insert_record(conn, 'profiles', '2,"Casual", 0, 99999,"ordinarycasual07","asmd8a7sd87a89sd7s5d65saf6hg7hs","anonymouse420@gmail.com"')
+insert_record(conn, 'profiles', '3,"[EoC]tomek123", 5, 2,"tomq777","asd78sag78hjgcvbn789vc8cx5692jfi","tomeeeeeq172@vp.pl"')
+insert_record(conn, 'profiles', '4,"adam2008pl", 2, 5,"adamo123","fggerhgtew43rt2rg112!@#","adamo123@gmail.com"')
