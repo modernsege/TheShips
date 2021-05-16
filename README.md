@@ -3,6 +3,16 @@
 Szymon Cygan Informatyka Techniczna, gr. proj. 1 <br/>
 Maciej Leśniak Informatyka Techniczna, gr. proj. 2
 
+### PORADNIK JAK DODAĆ BAZE U SIEBIE
+Dla Windowsa
+1. Pobrać repozytorium na lokalny dysk
+2. Włączyć serwis MySQL 
+3. W teminalu cd <ścieżka lokalna>\MySQL\MySQL Server 8.0\bin
+4. mysql -u twoja_nazwa_uzytkownika -p
+5. source <ścieżka lokalna repozytorium>/CreationOfTHESHIPS.sql
+6. W terminalu w ścieżce repozytorium: ./CRUD: py fill_TheShips_with_data.py (uzupełnienie bazy startowymi danymi)
+7. Aby uruchomić CRUD: W terminalu w ścieżce repozytorium: ./CRUD: py main.py
+
 ### IDEA PROJEKTU
 Ideą projektu jest stworzenie bazy danych do gry, którą planujemy napisać. Gra ma być zmodyfikowaną i komputerową wersją tradycyjnej gry w statki (na kartkach papieru). 
 Główna mechanika gry będzie działać w opisany poniżej sposób.
