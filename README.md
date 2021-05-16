@@ -1,4 +1,5 @@
 # TheShips
+### IDEA PROJEKTU
 Ideą projektu jest stworzenie bazy danych do gry, którą planujemy napisać. Gra ma być zmodyfikowaną i komputerową wersją tradycyjnej gry w statki (na kartkach papieru). 
 Główna mechanika gry będzie działać w opisany poniżej sposób.
 
