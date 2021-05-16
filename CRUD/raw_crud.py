@@ -44,7 +44,7 @@ def insert_record(connection, table, values):
         print("Nice try")
 
 
-def display_sth(connection, table, columns="*", where_or_having="", group_by=None):
+def display_sth(connection, table, columns="*", where_or_having=True, group_by=None):
     if no_easy_insertion(table, columns, where_or_having, group_by) == False:
         cursor = connection.cursor()
         if group_by == None:
@@ -122,5 +122,39 @@ def display_columns(connection, table, database = 'TheShips'):
             output.append(result[i][0])
         return output
 
+def display_tables(connection, database = 'TheShips'):
+    if no_easy_insertion(database) == False:
+        cursor = connection.cursor()
+        try:
+            cursor.execute(
+                f"show tables")
+
+        except:
+            print("Something went HORRIBLY wrong!(where). ",
+                    sys.exc_info()[0])
+            return None
+
+        result = cursor.fetchall()
+
+        output = []
+        for i in range (len(result)):
+            output.append(result[i][0])
+        return output
 
 
+def if_string_to_SQL(name):
+    num_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    string_flag = 0
+    for i in range(len(name)):
+        if name[i] in num_list:
+            pass
+        else:
+            string_flag = 1
+
+    if string_flag == 1:
+        result = f"'{name}'"
+    else:
+        result = name
+
+    return result

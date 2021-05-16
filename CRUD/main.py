@@ -5,7 +5,7 @@ from update import Update
 from delete import Delete
 from raw_crud import connection_to_server
 
-conn = connection_to_server() #Default localhost i połączenie z bazą TheShips
+conn = connection_to_server(datab="world") #Default localhost i połączenie z bazą TheShips
 
 if conn:
     while True:
@@ -31,3 +31,6 @@ if conn:
 
 else:
     print('Failed to connect to database')
+
+
+
