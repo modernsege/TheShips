@@ -23,7 +23,7 @@ class Read:
         for i in range (len(all_tables)):
             all_tables[i] = all_tables[i].upper()
             print(all_tables[i], end=" | ")
-        chosen_table = input("What table to update: ")
+        chosen_table = input("What table to display: ")
         chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
@@ -74,8 +74,10 @@ class Read:
     def display_table_quick(self, conn):
         all_tables = display_tables(conn)
         for i in range (len(all_tables)):
-            print(all_tables[i].upper(), end=" | ")
+            all_tables[i] = all_tables[i].upper()
+            print(all_tables[i], end=" | ")
         chosen_table = input("What table to display: ")
+        chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
             all_columns=display_columns(conn, chosen_table)
