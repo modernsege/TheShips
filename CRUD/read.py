@@ -3,6 +3,7 @@ from raw_crud import display_sth
 from raw_crud import display_columns
 from raw_crud import display_tables
 
+
 class Read:
     def display_table(self, conn):
         
@@ -44,15 +45,17 @@ class Read:
             user_choice = input("Do you want to add grouping to your query?(y/n)")
             if user_choice == "y":
                 while True:
-                    condition_column = input("Choose column you want group by: ")
+                    condition_column = input("Choose column you want to group by: ")
                     if condition_column in all_columns:
-                        group_by += condition_column
-
+                       group_by += condition_column
                     else:
                         break
-                    continue_choice = input("Do you want to add another column for grouping? (y/n)")
-                    if continue_choice == "y":
-                        where_condition += ", "
+
+                    continues_choice = input("Do you want to add another column for grouping?? (y/n)")
+                    if continues_choice == "y":
+                        group_by += ", "
+
+
                     else:
                         break
             if group_by == "":
@@ -91,3 +94,4 @@ class Read:
 
         
         
+
