@@ -79,9 +79,11 @@ class Read:
 
         if chosen_table in all_tables:
             all_columns=display_columns(conn, chosen_table)
+            print()
             for i in range (len(all_columns)):
                 all_columns[i] = all_columns[i].upper()
                 print(all_columns[i], end=" | ")
+            print()
             result = display_sth(conn, chosen_table)
             self.display(result)
         else:
