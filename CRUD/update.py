@@ -1,4 +1,3 @@
-import mysql.connector
 from raw_crud import update_sth
 
 
