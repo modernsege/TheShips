@@ -78,6 +78,10 @@ class Read:
         chosen_table = input("What table to display: ")
 
         if chosen_table in all_tables:
+            all_columns=display_columns(conn, chosen_table)
+            for i in range (len(all_columns)):
+                all_columns[i] = all_columns[i].upper()
+                print(all_columns[i], end=" | ")
             result = display_sth(conn, chosen_table)
             self.display(result)
         else:
