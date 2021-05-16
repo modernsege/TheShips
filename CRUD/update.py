@@ -25,7 +25,7 @@ class Update:
         chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
-            all_columns=display_columns(conn, chosen_table, 'world')
+            all_columns=display_columns(conn, chosen_table)
             for i in range (len(all_columns)):
                 all_columns[i] = all_columns[i].upper()
                 print(all_columns[i], end=" | ")
@@ -63,7 +63,7 @@ class Update:
         chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
-            all_columns=display_columns(conn, chosen_table, 'world')
+            all_columns=display_columns(conn, chosen_table)
             for i in range (len(all_columns)):
                 all_columns[i] = all_columns[i].upper()
                 print(all_columns[i], end=" | ")

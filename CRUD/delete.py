@@ -7,10 +7,12 @@ class Delete:
     def delete_rows(self, conn):
         all_tables = display_tables(conn)
 
-        for i in range(len(all_tables)):
-            print(all_tables[i].upper(), end=" | ")
+        for i in range (len(all_tables)):
+            all_tables[i] = all_tables[i].upper()
+            print(all_tables[i], end=" | ")
 
         chosen_table = input("\nIn which table you want to delete a rows? Choose one: ")
+        chosen_table = chosen_table.upper()
 
         if chosen_table in all_tables:
             where_condition = input("Insert where condition(SQL format):")
@@ -18,3 +20,5 @@ class Delete:
 
 
         delete_sth(conn, chosen_table, where_condition)
+        
+        
