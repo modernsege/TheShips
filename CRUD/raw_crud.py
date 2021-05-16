@@ -44,7 +44,7 @@ def insert_record(connection, table, values):
         print("Nice try")
 
 
-def display_sth(connection, table, columns="*", where_or_having="", group_by=None):
+def display_sth(connection, table, columns="*", where_or_having=True, group_by=None):
     if no_easy_insertion(table, columns, where_or_having, group_by) == False:
         cursor = connection.cursor()
         if group_by == None:
@@ -104,11 +104,30 @@ def delete_sth(connection, table, where):
 
 
 def display_columns(connection, table, database = 'TheShips'):
-    if no_easy_insertion(table) == False:
+    if no_easy_insertion(table, database) == False:
         cursor = connection.cursor()
         try:
             cursor.execute(
                 f"select column_name from information_schema.columns where table_name = N'{table}' and table_schema = '{database}';")
+
+        except:
+            print("Something went HORRIBLY wrong!(where). ",
+                    sys.exc_info()[0])
+            return None
+
+        result = cursor.fetchall()
+
+        output = []
+        for i in range (len(result)):
+            output.append(result[i][0])
+        return output
+
+def display_tables(connection, database = 'TheShips'):
+    if no_easy_insertion(database) == False:
+        cursor = connection.cursor()
+        try:
+            cursor.execute(
+                f"show tables")
 
         except:
             print("Something went HORRIBLY wrong!(where). ",
