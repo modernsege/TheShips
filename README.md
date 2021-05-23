@@ -1,7 +1,4 @@
-# TheShips
-## TWÓRCY PROJKETU
-Szymon Cygan Informatyka Techniczna, gr. proj. 1 <br/>
-Maciej Leśniak Informatyka Techniczna, gr. proj. 2
+#BAZA DANYCH DO KOMPUTEROWEJ WERSJI GRY W STATKI
 
 ### PORADNIK JAK DODAĆ BAZE U SIEBIE
 Dla Windowsa
@@ -14,9 +11,6 @@ Dla Windowsa
 7. Aby uruchomić CRUD: W terminalu w ścieżce repozytorium: ./CRUD: py main.py
 
 ### IDEA PROJEKTU
-Ideą projektu jest stworzenie bazy danych do gry, którą planujemy napisać. Gra ma być zmodyfikowaną i komputerową wersją tradycyjnej gry w statki (na kartkach papieru). 
-Główna mechanika gry będzie działać w opisany poniżej sposób.
-
 Na początku ustawiane będą ogólne parametrey rozgrywki (takie jak wielkość planszy czy częstotliwość występowania na mapie przeszkód).
 Następnie gracze będą mieli możliwość wybrania frakcji, którą będą reprezentować w danym meczu. Będzie to znacząco wpływać na rozgrywkę. Każda frakcja będzie zapewniać określoną ilość waluty w grze (której znaczenie będzie opisane później) jak i specjalne umiejętności (zarówno aktywne jak i pasywne).
 Później grający dostaną możliwość wykorzystania waluty “zapewnionej im przez frakcje”. Dokładniej - pojawi się okienko sklepu. Tutaj rywale będą mogli kupić przedmioty jednorazowego użytku i ulepszenia statków, które pomogą im wygrać.
