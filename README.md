@@ -1,5 +1,3 @@
-##BAZA DANYCH DO KOMPUTEROWEJ WERSJI GRY W STATKI
-
 ### PORADNIK JAK DODAĆ BAZE U SIEBIE
 Dla Windowsa
 1. Pobrać repozytorium na lokalny dysk
@@ -9,6 +7,8 @@ Dla Windowsa
 5. source <ścieżka lokalna repozytorium>/CreationOfTHESHIPS.sql
 6. W terminalu w ścieżce repozytorium: ./CRUD: py fill_TheShips_with_data.py (uzupełnienie bazy startowymi danymi)
 7. Aby uruchomić CRUD: W terminalu w ścieżce repozytorium: ./CRUD: py main.py
+
+##BAZA DANYCH DO KOMPUTEROWEJ WERSJI GRY W STATKI
 
 ### IDEA PROJEKTU
 Na początku ustawiane będą ogólne parametrey rozgrywki (takie jak wielkość planszy czy częstotliwość występowania na mapie przeszkód).
